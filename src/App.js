@@ -8,13 +8,13 @@ function App() {
   const videoConstraints = {
     width: 1280,
     height: 720,
-    facingMode: "user",
-    // facingMode: { exact: "environment" },
+    // facingMode: "user",
+    facingMode: { exact: "environment" },
   };
 
   return (
     <div className="App">
-      {/* <Webcam
+      <Webcam
         audio={false}
         height={720}
         screenshotFormat="image/jpeg"
@@ -25,13 +25,14 @@ function App() {
           <button
             onClick={() => {
               const imageSrc = getScreenshot();
+              console.log("imageSrc: ", imageSrc);
             }}
           >
             Capture photo
           </button>
         )}
-      </Webcam> */}
-      <WebcamComponent />
+      </Webcam>
+      {/* <WebcamComponent /> */}
     </div>
   );
 }
