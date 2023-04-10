@@ -3,6 +3,7 @@ import "./App.css";
 import React from "react";
 import Webcam from "react-webcam";
 import WebcamComponent from "./Webcam";
+import Html5Webcam from "./Html5Webcam";
 
 function App() {
   const videoConstraints = {
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Webcam
+      {/* <Webcam
         audio={false}
         height={720}
         screenshotFormat="image/jpeg"
@@ -31,8 +32,9 @@ function App() {
             Capture photo
           </button>
         )}
-      </Webcam>
+      </Webcam> */}
       {/* <WebcamComponent /> */}
+      <Html5Webcam />
     </div>
   );
 }
